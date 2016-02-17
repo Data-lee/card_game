@@ -18,15 +18,20 @@ function getDeck() {
 
 /** 
 * Shuffles a deck of cards.
-* @param array of cards
-* @return randomized array
+* @param array $deck
+* @return array $deck randomized deck of cards
 */
 function shuffleDeck(&$deck) {
 	shuffle($deck);
 }
 
-/*
-* 
+/**
+* Deals a hand of cards to each player
+* @param array $players players' names
+* @param int $numCards number of cards in each players hands
+* @param array $deck shuffled deck of cards array 
+* @return array $playersHands
+* @return array $deck
 */
 function deal($players, $numCards, &$deck) {
 	// convert players from values to keys
